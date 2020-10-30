@@ -1,0 +1,14 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <br /><h2>Edit Name, City, Department, Salary</h2>  <br />
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <span class = "label label-default"> Name </span><input class="form-control" type="text" name="name" value="{{ .Name }}"  /><br />
+      <span class = "label label-default"> City </span><input class="form-control" type="text" name="city" value="{{ .City }}"  /><br />
+      <span class = "label label-default"> Department </span><input class="form-control" type="text" name="department" value="{{ .Department }}"  /><br />
+      <span class = "label label-default"> Salary </span><input class="form-control" type="text" name="salary" value="{{ .Salary }}"  /><br />
+      <input class="btn btn-primary" type="submit" value="Save user" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
